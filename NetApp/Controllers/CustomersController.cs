@@ -18,7 +18,7 @@ namespace NetApp.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+            return View(db.Customers.Include("CustomersContacts").ToList());
         }
 
         // GET: Customers/Details/5
