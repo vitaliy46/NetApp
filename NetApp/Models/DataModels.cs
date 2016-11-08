@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace NetApp.Models
 {
-    public class Customer
+    public class Customer : IEnumerable
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -13,7 +14,12 @@ namespace NetApp.Models
         public string Address { get; set; }
         public string Phone { get; set; }
 
-        public List<CustomerContact> CustomersContacts { get; set; }
+        public IList<CustomerContact> CustomerContacts { get; set; }
+        
+        public IEnumerator GetEnumerator()
+        {
+            return CustomerContacts.GetEnumerator();
+        }
     }
 
     public class CustomerContact
@@ -24,7 +30,7 @@ namespace NetApp.Models
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
 
-        public List<CustomerContactPhone> CustomersContactsPhones { get; set; }
+        public IList<CustomerContactPhone> CustomersContactsPhones { get; set; }
     }
 
     public class CustomerContactPhone
