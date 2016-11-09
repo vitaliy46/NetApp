@@ -48,6 +48,12 @@
                         <td>
                             @Html.DisplayFor(itemContact => contact.Name)
                         </td>
+                        <td>
+                            @foreach (var phone in contact.CustomerContactPhones)
+                            {
+                                @Html.DisplayFor(itemPhone => phone.Phone)
+                            }
+                        </td>
                     </tr>
                 }
             </table>

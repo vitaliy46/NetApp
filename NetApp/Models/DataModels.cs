@@ -22,7 +22,7 @@ namespace NetApp.Models
         }
     }
 
-    public class CustomerContact
+    public class CustomerContact : IEnumerable
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -30,7 +30,12 @@ namespace NetApp.Models
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
 
-        public IList<CustomerContactPhone> CustomersContactsPhones { get; set; }
+        public IList<CustomerContactPhone> CustomerContactPhones { get; set; }
+
+        public IEnumerator GetEnumerator()
+        {
+            return CustomerContactPhones.GetEnumerator();
+        }
     }
 
     public class CustomerContactPhone
