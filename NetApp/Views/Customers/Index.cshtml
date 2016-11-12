@@ -46,12 +46,12 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(itemContact => contact.Name)
+                            @Html.ActionLink(contact.Name, "Edit", "CustomerContacts", new { id = contact.Id }, null)
                         </td>
                         <td>
                             @foreach (var phone in contact.CustomerContactPhones)
                             {
-                                @Html.DisplayFor(itemPhone => phone.Phone)
+                                @Html.ActionLink(phone.Phone, "Edit", "CustomerContactPhones", new { id = phone.Id }, null)
                             }
                         </td>
                     </tr>

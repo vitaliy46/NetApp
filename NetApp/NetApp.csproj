@@ -176,6 +176,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerContactPhonesController.cs" />
+    <Compile Include="Controllers\CustomerContactsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -259,6 +261,16 @@
     <Content Include="Views\Suppliers\Details.cshtml" />
     <Content Include="Views\Suppliers\Edit.cshtml" />
     <Content Include="Views\Suppliers\Index.cshtml" />
+    <Content Include="Views\CustomerContacts\Create.cshtml" />
+    <Content Include="Views\CustomerContacts\Delete.cshtml" />
+    <Content Include="Views\CustomerContacts\Details.cshtml" />
+    <Content Include="Views\CustomerContacts\Edit.cshtml" />
+    <Content Include="Views\CustomerContacts\Index.cshtml" />
+    <Content Include="Views\CustomerContactPhones\Create.cshtml" />
+    <Content Include="Views\CustomerContactPhones\Delete.cshtml" />
+    <Content Include="Views\CustomerContactPhones\Details.cshtml" />
+    <Content Include="Views\CustomerContactPhones\Edit.cshtml" />
+    <Content Include="Views\CustomerContactPhones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
