@@ -49,10 +49,16 @@
                             @Html.ActionLink(contact.Name, "Edit", "CustomerContacts", new { id = contact.Id }, null)
                         </td>
                         <td>
-                            @foreach (var phone in contact.CustomerContactPhones)
-                            {
-                                @Html.ActionLink(phone.Phone, "Edit", "CustomerContactPhones", new { id = phone.Id }, null)
-                            }
+                            <table>
+                                @foreach (var phone in contact.CustomerContactPhones)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.ActionLink(phone.Phone, "Edit", "CustomerContactPhones", new { id = phone.Id }, null)
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
                         </td>
                     </tr>
                 }

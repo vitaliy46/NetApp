@@ -116,6 +116,7 @@ namespace NetApp.Controllers
             Customer customer = db.Customers.Find(id);
             db.Customers.Remove(customer);
             db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 

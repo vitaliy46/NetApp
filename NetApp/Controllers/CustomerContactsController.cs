@@ -10,6 +10,7 @@ using NetApp.Models;
 
 namespace NetApp.Controllers
 {
+    [Authorize]
     public class CustomerContactsController : Controller
     {
         private AppDbContext db = new AppDbContext();
