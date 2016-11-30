@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace NetApp.Models
 {
@@ -55,5 +57,15 @@ namespace NetApp.Models
         public string Url { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+    }
+
+    public class Note
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+
+        [AllowHtml]
+        [DataType(DataType.MultilineText)]
+        public string Text { get; set; }
     }
 }

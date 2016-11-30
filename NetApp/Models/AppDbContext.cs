@@ -18,5 +18,7 @@ namespace NetApp.Models
         public DbSet<CustomerContactPhone> CustomerContactPhones { get; set; }
 
         public DbSet<Supplier> Suppliers { get; set; }
+
+        public DbSet<Note> Notes { get; set; }
     }
 }
